@@ -1,5 +1,5 @@
-extends CharacterBody2D
 class_name TowTruck
+extends CharacterBody2D
 
 # Vehicle Tuning Properties
 @export var wheel_base: float = 70.0 # how far apart the two wheelsc
