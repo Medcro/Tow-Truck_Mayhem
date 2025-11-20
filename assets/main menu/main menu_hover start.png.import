@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnn4sgw30si38"
-path="res://.godot/imported/tow[1].png-2ee56b7faf36faa0e5f2bad0aef6cdc2.ctex"
+uid="uid://btf7i7s1s1qxn"
+path="res://.godot/imported/main menu_hover start.png-e23f688476920b6e081d1a69f255ba59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tow[1].png"
-dest_files=["res://.godot/imported/tow[1].png-2ee56b7faf36faa0e5f2bad0aef6cdc2.ctex"]
+source_file="res://assets/main menu/main menu_hover start.png"
+dest_files=["res://.godot/imported/main menu_hover start.png-e23f688476920b6e081d1a69f255ba59.ctex"]
 
 [params]
 
