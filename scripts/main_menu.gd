@@ -7,6 +7,7 @@ extends Control
 @onready var confirmation_exit: Panel = $ConfirmationExit
 @onready var yes: Button = $ConfirmationExit/Yes
 @onready var no: Button = $ConfirmationExit/No
+@onready var credits_panel: Panel = $CreditsPanel
 
 func _ready():
 	start.disabled = false
@@ -15,6 +16,7 @@ func _ready():
 	exit.disabled = false
 	settings.visible = false
 	confirmation_exit.visible = false
+	credits_panel.visible = false
 	
 # handle start button
 func _on_start_pressed() -> void:
@@ -36,14 +38,13 @@ func _on_option_pressed() -> void:
 # handle credits button
 func _on_credits_pressed() -> void:
 	$ButtonPressed_SFX.play()
-	pass
+	credits_panel.visible = true
 
 # handle exit button
 func _on_exit_pressed() -> void:
 	disabled_button()
 	confirmation_exit.visible = true
 	$ButtonPressed_SFX.play()
-
 
 func _on_back_options_pressed() -> void:
 	_ready()
@@ -53,8 +54,10 @@ func _on_yes_pressed() -> void:
 	get_tree().quit() # exit app
 	$ButtonPressed_SFX.play()
 
-
 func _on_no_pressed() -> void:
 	_ready()
 	$ButtonPressed_SFX.play()
-		
+
+func _on_back_pressed() -> void:
+	_ready()
+	$ButtonPressed_SFX.play()
