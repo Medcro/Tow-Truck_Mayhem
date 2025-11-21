@@ -281,6 +281,7 @@ volume_db = -9.0
 
 [node name="CreditsPanel" type="Panel" parent="."]
 visible = false
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
