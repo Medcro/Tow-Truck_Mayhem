@@ -15,11 +15,10 @@ extends CharacterBody2D
 @export var traction_fast: float = 0.1 # "Slippy" traction at high speed
 @export var traction_slow: float = 0.7 # "Grippy" traction at low speed
 
-
 var acceleration: Vector2 = Vector2.ZERO
 var steer_direction: float = 0.0 # the direction that we turning in -/+
 
-func _ready() -> void:
+func _ready():
 	sfx_drive.play()
 	
 # function to handle physics process of the truck (get called 60 times per second)
