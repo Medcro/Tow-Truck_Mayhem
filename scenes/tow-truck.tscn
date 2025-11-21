@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bajthmljdxy5f"]
 
 [ext_resource type="Script" uid="uid://d1tcml14krb3w" path="res://scripts/tow-truck.gd" id="1_ho5m3"]
-[ext_resource type="Texture2D" uid="uid://drinb6tlybh6g" path="res://assets/tow_truck.tres" id="2_de388"]
-[ext_resource type="AudioStream" uid="uid://cpr7l8vq0hehk" path="res://assets/audio/carengine.wav" id="3_de388"]
+[ext_resource type="Texture2D" uid="uid://drinb6tlybh6g" path="res://assets/cars/tow_truck.tres" id="2_de388"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_npdvv"]
 radius = 13.0
