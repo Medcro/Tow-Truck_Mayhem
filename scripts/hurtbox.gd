@@ -3,6 +3,7 @@ extends Area2D
 
 @export var health: Health # references to health component
 @export var invincibility_duration: float = 0.5
+@onready var car_crash_sfx: AudioStreamPlayer2D = $"../../Car_Crash_SFX"
 
 signal hit_received(damage: int, body: Node2D) # emitted when the damage is aplly
 signal player_lost # Emitted when the linked health component reports that health has been depleted to zero
@@ -34,8 +35,9 @@ func take_damage(collision_body: Collision):
 	hit_received.emit(collision_body.damage, collision_body)
 	
 	health.set_temporary_immortality(invincibility_duration)
+	car_crash_sfx.play()
+	
 
 # when the healths reaches zeo
 func _on_health_depleted() -> void:
-	print("Game Over")
 	emit_signal("player_lost")

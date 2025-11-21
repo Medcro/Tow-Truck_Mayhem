@@ -50,7 +50,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_6u8u7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6dprm")
 text = "Back"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("2_wbsog")
 volume_db = -14.0
