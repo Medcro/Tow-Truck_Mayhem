@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://1rpounk3wmy0"]
+[gd_scene load_steps=58 format=3 uid="uid://1rpounk3wmy0"]
 
 [ext_resource type="Texture2D" uid="uid://yofyn3a1gj6g" path="res://assets/main menu/main menu_fixed lineart.png" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://bswjx2ihgaeg4" path="res://scripts/main_menu.gd" id="1_rtw2f"]
@@ -6,7 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://i2dtxc3a0psx" path="res://assets/main menu/main menu_hover options.png" id="3_8ln24"]
 [ext_resource type="Texture2D" uid="uid://1y6o4120u736" path="res://assets/main menu/main menu_hover credits.png" id="4_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://8jcdhk17jxse" path="res://assets/main menu/main menu_hover exit.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://cl4c44falhnpy" path="res://assets/main menu/settings.png" id="7_jk1qb"]
+[ext_resource type="Script" path="res://scripts/audio_control.gd" id="7_oa1go"]
 [ext_resource type="Texture2D" uid="uid://cijy3gf1tu2xe" path="res://assets/main menu/Are_u_sure...png" id="8_5dd4i"]
+[ext_resource type="AudioStream" uid="uid://ckraut501hxsx" path="res://assets/audio/Button Press SFX.mp3" id="8_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://d1rmcd6mytmjt" path="res://assets/main menu/Credits new.png" id="10_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://b5bal7pygeta2" path="res://assets/main menu/x_button.tres" id="11_flqon"]
+[ext_resource type="AudioStream" uid="uid://7gthe7vaxmte" path="res://assets/audio/Main Menu OST.mp3" id="12_flqon"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
 texture = ExtResource("1_l6cm7")
@@ -55,7 +61,14 @@ texture = ExtResource("5_oa1go")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svtp6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgwnu"]
+texture = ExtResource("7_jk1qb")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_engjn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6h3lr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj67d"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_rtw2f"]
 color = Color(1, 1, 1, 1)
@@ -87,6 +100,19 @@ texture = ExtResource("8_5dd4i")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1a85y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl5e0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ajci"]
+texture = ExtResource("10_lgwnu")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xyero"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tcusk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4puye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vcge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ip0br"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -170,46 +196,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -314.5
-offset_top = -205.0
-offset_right = 314.5
-offset_bottom = 205.0
+offset_left = -402.0
+offset_top = -261.5
+offset_right = 402.0
+offset_bottom = 261.5
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Label" type="Label" parent="Settings"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -162.5
-offset_right = 162.5
-offset_bottom = 67.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
-text = "Settings"
-horizontal_alignment = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_lgwnu")
 
 [node name="Back" type="Button" parent="Settings"]
 layout_mode = 0
-offset_left = 171.5
-offset_top = 304.0
-offset_right = 216.5
-offset_bottom = 335.0
+offset_left = 608.0
+offset_top = 35.5
+offset_right = 617.7079
+offset_bottom = 56.073326
 scale = Vector2(6.6956034, 3.402464)
 theme_override_font_sizes/font_size = 8
-theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
-text = "Back"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_engjn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6h3lr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dj67d")
+text = "
+"
 
 [node name="AudioControl" type="HSlider" parent="Settings"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -124.5
-offset_top = 68.0
-offset_right = 234.5
-offset_bottom = 114.0
+offset_left = -57.0
+offset_top = 178.5
+offset_right = 216.0
+offset_bottom = 224.5
 grow_horizontal = 2
 theme_override_styles/slider = SubResource("StyleBoxLine_rtw2f")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_oa1go")
@@ -217,15 +234,8 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_oa1go")
 max_value = 1.0
 step = 0.05
 value = 1.0
-
-[node name="Label2" type="Label" parent="Settings"]
-layout_mode = 0
-offset_left = 40.5
-offset_top = 72.0
-offset_right = 186.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 26
-text = "Master"
+script = ExtResource("7_oa1go")
+audio_bus_name = "Master"
 
 [node name="ConfirmationExit" type="Panel" parent="."]
 visible = false
@@ -265,6 +275,45 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_vr8o3")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_1a85y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hl5e0")
 
+[node name="ButtonPressed_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tbmy8")
+volume_db = -9.0
+
+[node name="CreditsPanel" type="Panel" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -477.75
+offset_top = -250.75
+offset_right = 477.75
+offset_bottom = 250.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ajci")
+
+[node name="Back" type="Button" parent="CreditsPanel"]
+layout_mode = 0
+offset_left = 810.75
+offset_top = 51.75
+offset_right = 852.75
+offset_bottom = 90.75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xyero")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tcusk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4puye")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6vcge")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ip0br")
+icon = ExtResource("11_flqon")
+
+[node name="BackgroundOST" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_flqon")
+volume_db = -16.0
+autoplay = true
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
@@ -273,3 +322,4 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_hl5e0")
 [connection signal="value_changed" from="Settings/AudioControl" to="Settings/AudioControl" method="_on_value_changed"]
 [connection signal="pressed" from="ConfirmationExit/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="ConfirmationExit/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CreditsPanel/Back" to="." method="_on_back_pressed"]

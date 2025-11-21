@@ -1,52 +1,75 @@
 extends Control
-@onready var start: Button = $Start
-@onready var option: Button = $Option
-@onready var credits: Button = $Credits
-@onready var exit: Button = $Exit 
+
+@onready var main_buttons: Array[Button] = [
+	$Start,
+	$Option,
+	$Credits,
+	$Exit
+]
+
 @onready var settings: Panel = $Settings
 @onready var confirmation_exit: Panel = $ConfirmationExit
-@onready var yes: Button = $ConfirmationExit/Yes
-@onready var no: Button = $ConfirmationExit/No
+@onready var credits_panel: Panel = $CreditsPanel
+@onready var button_sfx: AudioStreamPlayer = $ButtonPressed_SFX
 
+# Main menu's default state
 func _ready():
-	start.disabled = false
-	option.disabled = false
-	credits.disabled = false
-	exit.disabled = false
+	set_buttons_enabled(true)
+	hide_all_panels()
+
+# Enable/disable all main menu buttons
+func set_buttons_enabled(enabled: bool) -> void:
+	for button in main_buttons:
+		button.disabled = not enabled
+
+# Hide all popup panels
+func hide_all_panels() -> void:
 	settings.visible = false
 	confirmation_exit.visible = false
-	
-# handle start button
+	credits_panel.visible = false
+
+# Play button sound effect
+func play_button_sound() -> void:
+	button_sfx.play()
+
+# Show a panel and disable main buttons
+func show_panel(panel: Panel) -> void:
+	play_button_sound()
+	set_buttons_enabled(false)
+	panel.visible = true
+
+# Close current panel and return to main menu
+func close_panel() -> void:
+	play_button_sound()
+	_ready()
+
+# Button handlers
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn") # change scene to main
+	play_button_sound()
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
-func disabled_button() -> void:
-	start.disabled = true
-	option.disabled = true
-	credits.disabled = true
-	exit.disabled = true
-
-# handle option button
 func _on_option_pressed() -> void:
-	disabled_button()
-	settings.visible = true
+	show_panel(settings)
 
-# handle credits button
 func _on_credits_pressed() -> void:
-	pass
+	play_button_sound()
+	credits_panel.visible = true
 
-# handle exit button
 func _on_exit_pressed() -> void:
-	disabled_button()
-	confirmation_exit.visible = true
-
+	show_panel(confirmation_exit)
 
 func _on_back_options_pressed() -> void:
-	_ready()
+	play_button_sound()
+	close_panel()
 
 func _on_yes_pressed() -> void:
-	get_tree().quit() # exit app
-
+	play_button_sound()
+	get_tree().quit()
 
 func _on_no_pressed() -> void:
-	_ready()
+	play_button_sound()
+	close_panel()
+
+func _on_back_pressed() -> void:
+	play_button_sound()
+	close_panel()
