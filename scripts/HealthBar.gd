@@ -1,4 +1,4 @@
-extends ProgressBar
+extends TextureProgressBar
 
 @export var health_component: Health # Health component
 
@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func update():
-	value = health_component.health * 100 / health_component.max_health
+	value = health_component.health * 100 / (health_component.max_health)
 
 func _on_health_changed(diff: int):
 	update()
