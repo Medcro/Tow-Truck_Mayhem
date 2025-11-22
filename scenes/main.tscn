@@ -36,4 +36,4 @@ screen_margin = 50.0
 
 [node name="LevelStartSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_85g3d")
-volume_db = -8.0
+volume_db = -10.0
