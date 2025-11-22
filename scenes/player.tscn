@@ -129,9 +129,9 @@ expand_mode = 2
 stretch_mode = 4
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("health_component")]
-offset_left = -100.0
+offset_left = -15.0
 offset_top = -192.0
-offset_right = 380.0
+offset_right = 465.0
 offset_bottom = 78.0
 scale = Vector2(1.1688404, 1.0199345)
 step = 0.0
