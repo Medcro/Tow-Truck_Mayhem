@@ -1,11 +1,11 @@
 extends Node
+class_name Clock
 
 # Signal emitted when the timer runs out and the player loses
-signal player_lost
+signal time_out
 
 @onready var label: Label = $Label 
 @onready var timer: Timer = $Timer 
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer  
 
 func _ready():
 	timer.start()  # Starts the countdown timer
@@ -23,6 +23,5 @@ func _process(delta):
 
 # Called when the timer reaches zero
 func _on_timer_timeout() -> void:
-	audio_stream_player.play() 
-	get_tree().paused = true  
-	emit_signal("player_lost")  # Notify other nodes that the player lost
+	emit_signal("time_out")  # Notify other nodes that the player lost
+	print("Time out")
