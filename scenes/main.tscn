@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://7qfqg006l7ij"]
 
 [ext_resource type="Texture2D" uid="uid://8d10nul8adj6" path="res://icon.svg" id="1_sugp2"]
-[ext_resource type="Script" uid="uid://wn0i3g7bv8c1" path="res://scripts/GameManager.gd" id="1_tipki"]
-[ext_resource type="PackedScene" uid="uid://dthkrlr4x3ypa" path="res://scenes/waypoint_marker.tscn" id="3_tefeu"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_tipki"]
+[ext_resource type="PackedScene" path="res://scenes/waypoint_marker.tscn" id="3_tefeu"]
 [ext_resource type="PackedScene" uid="uid://wp3dtf2tgjc" path="res://scenes/timer.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://rni2yfyra013" path="res://scenes/player.tscn" id="4_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://sjosjoav32e4" path="res://scenes/collision.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://bo3lxy34ofe65" path="res://scenes/game_over_manager.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bamqpeedcs01x" path="res://scenes/collision.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" path="res://scenes/game_over_manager.tscn" id="5_tefeu"]
 [ext_resource type="AudioStream" uid="uid://dqgese56bc37t" path="res://assets/audio/Level Start SFX.mp3" id="8_85g3d"]
 
 [node name="Main" type="Node2D"]
