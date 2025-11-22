@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://rni2yfyra013"]
+[gd_scene load_steps=14 format=3 uid="uid://rni2yfyra013"]
 
 [ext_resource type="PackedScene" uid="uid://bajthmljdxy5f" path="res://scenes/tow-truck.tscn" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://drinb6tlybh6g" path="res://assets/cars/tow_truck.tres" id="2_fjrip"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwo34n5pghue7" path="res://assets/full_health.tres" id="8_smehm"]
 [ext_resource type="Script" uid="uid://ddgr5bgyr0x08" path="res://scripts/HeartHealthUI.gd" id="8_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://jnrfai6s1pd1" path="res://assets/empty-hearth.tres" id="10_y4r1p"]
+[ext_resource type="Script" uid="uid://kosfidsx3mvm" path="res://scripts/HealthBar.gd" id="11_d2wvv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fjrip"]
 radius = 13.0
@@ -122,6 +123,19 @@ layout_mode = 2
 texture = ExtResource("8_smehm")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("health_component")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -534.0
+offset_right = 339.0
+offset_bottom = -507.0
+grow_vertical = 0
+value = 100.0
+script = ExtResource("11_d2wvv")
+health_component = NodePath("../../Health")
 
 [connection signal="area_entered" from="Tow-Truck/Hurtbox" to="Tow-Truck/Hurtbox" method="_on_area_entered"]
 [connection signal="body_shape_entered" from="Tow-Truck/Hurtbox" to="Tow-Truck/Hurtbox" method="_on_body_shape_entered"]
