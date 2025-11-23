@@ -53,9 +53,11 @@ volume_db = -10.0
 position = Vector2(4902, 47)
 
 [node name="GameplayOST" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("9_jv3i5")
 volume_db = -16.0
 
 [node name="GameplayOST_start" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("10_ll25s")
 volume_db = -16.0

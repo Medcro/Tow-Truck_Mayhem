@@ -3,7 +3,7 @@ extends Area2D
 
 @export var health: Health 
 @export var invincibility_duration: float = 0.5
-@onready var car_crash_sfx: AudioStreamPlayer2D = $"../../Car_Crash_SFX"
+@onready var car_crash_sfx: AudioStreamPlayer = $"../../Car_Crash_SFX"
 
 signal hit_received(damage: int, body: Node2D) 
 signal player_lost 

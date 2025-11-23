@@ -53,9 +53,11 @@ volume_db = -10.0
 position = Vector2(-5273, 1571)
 
 [node name="GameplayOST" type="AudioStreamPlayer" parent="Checkpoint"]
+process_mode = 3
 stream = ExtResource("9_vqwqk")
 volume_db = -16.0
 
 [node name="GameplayOST_start" type="AudioStreamPlayer" parent="Checkpoint"]
+process_mode = 3
 stream = ExtResource("10_1q3ip")
 volume_db = -16.0
