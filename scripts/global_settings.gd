@@ -1,7 +1,7 @@
 extends Node
 const SETTINGS_PATH = "user://settings.cfg"
-var music_volume: float = 0.5
-var sfx_volume: float = 0.5
+var music_volume: float = 1
+var sfx_volume: float = 1
 
 func _ready():
 	load_settings()
@@ -22,5 +22,5 @@ func load_settings():
 		sfx_volume = config.get_value("Audio", "sfx_volume", 0.5)
 		var music_bus_index = AudioServer.get_bus_index("Music")
 		AudioServer.set_bus_volume_db(music_bus_index, linear_to_db(music_volume))
-		var sfx_bus_index = AudioServer.get_bus_index("Master")
+		var sfx_bus_index = AudioServer.get_bus_index("SFX")
 		AudioServer.set_bus_volume_db(sfx_bus_index, linear_to_db(sfx_volume))

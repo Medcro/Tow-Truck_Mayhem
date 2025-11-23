@@ -309,7 +309,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_317l6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ichcy")
 
 [node name="Level0Description" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -321,13 +320,13 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rif6e")
 [node name="Title" type="Label" parent="Level0Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 646.0
+offset_left = 637.0
 offset_top = 114.0
-offset_right = 939.0
+offset_right = 932.0
 offset_bottom = 169.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "0. straight to u!"
+theme_override_font_sizes/font_size = 27
+text = "0. A Humble Beginning"
 
 [node name="Description" type="RichTextLabel" parent="Level0Description"]
 modulate = Color(0, 0, 0, 1)
@@ -411,7 +410,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_317l6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ichcy")
 
 [node name="Level1Description" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

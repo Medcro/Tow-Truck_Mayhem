@@ -33,4 +33,5 @@ func _on_body_entered(body: Node2D) -> void:
 		winning_sfx.play()
 		checkpoint_activated.emit()
 		await get_tree().create_timer(2.5).timeout
+		AudioPlayer.play_music_level()
 		get_tree().change_scene_to_file("res://scenes/level_select.tscn")

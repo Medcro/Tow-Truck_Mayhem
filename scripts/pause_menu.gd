@@ -34,6 +34,7 @@ func _on_settings_button_pressed() -> void:
 	settings_menu.visible = true
 
 func _on_main_menu_button_pressed() -> void:
+	AudioPlayer.play_music_level()
 	if click_sound:
 		click_sound.play()
 	get_tree().paused = false
