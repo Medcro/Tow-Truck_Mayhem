@@ -38,6 +38,7 @@ metadata/_edit_group_ = true
 position = Vector2(0, 46)
 
 [node name="pause_menu" parent="." instance=ExtResource("3_qjcqe")]
+layer = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

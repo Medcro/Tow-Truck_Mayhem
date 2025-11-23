@@ -58,7 +58,7 @@ shape = SubResource("CapsuleShape2D_f1ej7")
 
 [node name="sfx_engine2" type="AudioStreamPlayer2D" parent="Tow-Truck"]
 stream = ExtResource("4_ur7pv")
-volume_db = -20.0
+volume_db = -22.0
 parameters/looping = true
 
 [node name="Car" parent="." instance=ExtResource("2_qhqgy")]
