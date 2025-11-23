@@ -24,5 +24,6 @@ one_shot = true
 process_mode = 3
 stream = ExtResource("2_5lxq6")
 volume_db = -4.0
+bus = &"SFX"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -49,6 +49,7 @@ layer = 2
 [node name="LevelStartSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_sk60w")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="Checkpoint" parent="." instance=ExtResource("7_rhhhf")]
 position = Vector2(4902, 47)
@@ -57,8 +58,10 @@ position = Vector2(4902, 47)
 process_mode = 3
 stream = ExtResource("9_jv3i5")
 volume_db = -16.0
+bus = &"Music"
 
 [node name="GameplayOST_start" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("10_ll25s")
 volume_db = -16.0
+bus = &"Music"

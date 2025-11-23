@@ -7,7 +7,7 @@ extends Control
 	$Exit
 ]
 
-@onready var settings: Panel = $Settings
+@onready var settings: Control = $Settings
 @onready var confirmation_exit: Panel = $ConfirmationExit
 @onready var credits_panel: Panel = $CreditsPanel
 @onready var button_sfx: AudioStreamPlayer = $ButtonPressed_SFX
@@ -34,7 +34,7 @@ func play_button_sound() -> void:
 	button_sfx.play()
 
 # Show a panel and disable main buttons
-func show_panel(panel: Panel) -> void:
+func show_panel(panel: Control) -> void:
 	play_button_sound()
 	set_buttons_enabled(false)
 	panel.visible = true
@@ -51,7 +51,7 @@ func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
 
 func _on_option_pressed() -> void:
-	show_panel(settings)
+	settings.visible = true
 
 func _on_credits_pressed() -> void:
 	play_button_sound()
@@ -62,7 +62,7 @@ func _on_exit_pressed() -> void:
 
 func _on_back_options_pressed() -> void:
 	play_button_sound()
-	close_panel()
+	settings.visible = false
 
 func _on_yes_pressed() -> void:
 	play_button_sound()
