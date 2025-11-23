@@ -115,19 +115,19 @@ func _on_back_button_pressed() -> void:
 	_ready()
 
 func _on_accept_level_0() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_0.tscn")
 
 func _on_accept_level_1() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 func _on_accept_level_2() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
 
 func _on_accept_level_3() -> void:
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
+	
 func _on_accept_level_4() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_4.tscn")
 
 func _on_accept_level_5() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_5.tscn")
