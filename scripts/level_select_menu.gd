@@ -115,7 +115,7 @@ func _on_back_button_pressed() -> void:
 	_ready()
 
 func _on_accept_level_0() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_level.tscn")
 
 func _on_accept_level_1() -> void:
 	pass # Replace with function body.
