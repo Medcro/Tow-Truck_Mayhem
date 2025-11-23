@@ -312,9 +312,10 @@ layout_mode = 0
 offset_left = 629.0
 offset_top = 183.0
 offset_right = 938.0
-offset_bottom = 252.0
+offset_bottom = 286.0
 theme_override_font_sizes/normal_font_size = 24
-text = "old granny mogok n need help"
+text = "An old lady's car broke down, help her as your first towing assignment!
+"
 
 [node name="|" type="Label" parent="Level0Description"]
 modulate = Color(0, 0, 0, 1)
@@ -392,8 +393,8 @@ offset_top = 114.0
 offset_right = 951.0
 offset_bottom = 217.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 34
-text = "1. bring me there:(
+theme_override_font_sizes/font_size = 31
+text = "1. Special Delivery...?
 "
 
 [node name="Description" type="RichTextLabel" parent="Level1Description"]
@@ -402,9 +403,9 @@ layout_mode = 0
 offset_left = 629.0
 offset_top = 183.0
 offset_right = 938.0
-offset_bottom = 321.0
+offset_bottom = 355.0
 theme_override_font_sizes/normal_font_size = 24
-text = "young slay woman needs to go to the mall but her mesin is mati"
+text = "A young and stunning woman is on her way towards the shopping centre when her car suddenly stopped"
 
 [node name="|" type="Label" parent="Level1Description"]
 modulate = Color(0, 0, 0, 1)
@@ -477,13 +478,13 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rif6e")
 [node name="Title" type="Label" parent="Level2Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 663.0
-offset_top = 114.0
-offset_right = 956.0
-offset_bottom = 217.0
+offset_left = 627.0
+offset_top = 113.0
+offset_right = 1029.0
+offset_bottom = 216.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "2. ouchhhhhh
+theme_override_font_sizes/font_size = 28
+text = "2. Boom Bam Ka-Chow!
 "
 
 [node name="Description" type="RichTextLabel" parent="Level2Description"]
@@ -492,9 +493,9 @@ layout_mode = 0
 offset_left = 629.0
 offset_top = 183.0
 offset_right = 938.0
-offset_bottom = 252.0
+offset_bottom = 286.0
 theme_override_font_sizes/normal_font_size = 24
-text = "silly bro menumbur pohon bcs mabok"
+text = "It appears someone wanted to touch grass, but took it too far..."
 
 [node name="|" type="Label" parent="Level2Description"]
 modulate = Color(0, 0, 0, 1)
@@ -567,13 +568,13 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rif6e")
 [node name="Title" type="Label" parent="Level3Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 685.0
+offset_left = 648.0
 offset_top = 114.0
-offset_right = 978.0
+offset_right = 941.0
 offset_bottom = 169.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
-text = "3. im okay"
+text = "3. Another one"
 
 [node name="Description" type="RichTextLabel" parent="Level3Description"]
 modulate = Color(0, 0, 0, 1)
@@ -583,7 +584,8 @@ offset_top = 183.0
 offset_right = 938.0
 offset_bottom = 286.0
 theme_override_font_sizes/normal_font_size = 24
-text = "bro baru keluar dari rumsak after numbur pohon"
+text = "A call for help! Wait... haven't i seen you somewhere before?
+"
 
 [node name="|" type="Label" parent="Level3Description"]
 modulate = Color(0, 0, 0, 1)
@@ -656,24 +658,24 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rif6e")
 [node name="Title" type="Label" parent="Level4Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 646.0
-offset_top = 114.0
-offset_right = 939.0
-offset_bottom = 169.0
+offset_left = 629.0
+offset_top = 113.0
+offset_right = 1005.0
+offset_bottom = 216.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "4. Double woble
+theme_override_font_sizes/font_size = 30
+text = "4. Highway to Heaven
 "
 
 [node name="Description" type="RichTextLabel" parent="Level4Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 629.0
-offset_top = 183.0
+offset_top = 175.0
 offset_right = 938.0
-offset_bottom = 252.0
+offset_bottom = 316.0
 theme_override_font_sizes/normal_font_size = 24
-text = "bro baru beli mobil tp gapunya driver license"
+text = "You find someone crashing a car, and the person doesn't have a license?!"
 
 [node name="|" type="Label" parent="Level4Description"]
 modulate = Color(0, 0, 0, 1)
@@ -752,19 +754,18 @@ offset_right = 1122.0
 offset_bottom = 207.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "5. double.... woble..... 
-STRAIGHT!
+text = "5. Lovey-Dovey Crash!
 "
 
 [node name="Description" type="RichTextLabel" parent="Level5Description"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 629.0
-offset_top = 219.0
+offset_top = 175.0
 offset_right = 938.0
 offset_bottom = 355.0
 theme_override_font_sizes/normal_font_size = 24
-text = "kali ini bro punya janji dengan his kisah, tapi dia masih belum bisa menyetir"
+text = "Someone has an appointment with their lover, but perhaps the person loves danger better"
 
 [node name="|" type="Label" parent="Level5Description"]
 modulate = Color(0, 0, 0, 1)

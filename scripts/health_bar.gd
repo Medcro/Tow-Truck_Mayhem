@@ -1,14 +1,15 @@
 extends TextureProgressBar
 
-@export var health_component: Health # Health component
+@export var health_component: Health 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	health_component.health_changed.connect(_on_health_changed)	
+	if health_component:
+		health_component.health_changed.connect(_on_health_changed)
+		max_value = health_component.max_health
+		update_bar()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func update():
-	value = health_component.health * 100 / (health_component.max_health)
+func update_bar():
+	value = health_component.health
 
-func _on_health_changed(diff: int):
-	update()
+func _on_health_changed(_diff: int):
+	update_bar()
