@@ -1,0 +1,140 @@
+[gd_scene load_steps=2 format=3 uid="uid://da2orfhdix0c0"]
+
+[ext_resource type="Script" uid="uid://brbynxg35n16d" path="res://scripts/shop_menu.gd" id="1_uj65v"]
+
+[node name="ShopMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uj65v")
+
+[node name="Shop" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buy" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 290.0
+offset_right = 783.0
+offset_bottom = 362.0
+text = "Buy"
+
+[node name="Buy2" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 276.0
+offset_right = 225.0
+offset_bottom = 348.0
+text = "Buy"
+
+[node name="Buy3" type="Button" parent="Shop"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 283.0
+offset_right = 509.0
+offset_bottom = 355.0
+text = "Buy"
+
+[node name="Currency" type="Label" parent="Shop"]
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 32
+text = "100$"
+
+[node name="Customitazion" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customitazion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -40.0
+offset_right = 117.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Customitazion/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tow-Truck: "
+
+[node name="TruckBack" type="Button" parent="Customitazion/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "<"
+
+[node name="TruckForw" type="Button" parent="Customitazion/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ">"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Customitazion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = 56.0
+offset_right = 117.5
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Customitazion/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Car: "
+
+[node name="CarBack" type="Button" parent="Customitazion/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "<"
+
+[node name="CarForw" type="Button" parent="Customitazion/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ">"
+
+[node name="ChangeMode" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -76.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Mode"
+
+[connection signal="pressed" from="Shop/Buy" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="Shop/Buy2" to="." method="_on_buy_2_pressed"]
+[connection signal="pressed" from="Shop/Buy3" to="." method="_on_buy_3_pressed"]
+[connection signal="pressed" from="ChangeMode" to="." method="_on_change_mode_pressed"]
