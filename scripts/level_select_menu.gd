@@ -118,32 +118,26 @@ func _on_back_button_pressed() -> void:
 
 func _on_accept_level_0() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_0.tscn")
 
 func _on_accept_level_1() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 func _on_accept_level_2() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
 
 func _on_accept_level_3() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
 	
 func _on_accept_level_4() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_4.tscn")
 
 func _on_accept_level_5() -> void:
 	AudioPlayer.stop_music()
-	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file("res://scenes/level_5.tscn")
 
 func _on_button_pressed() -> void:
