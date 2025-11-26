@@ -1,44 +1,53 @@
 extends Control
 
 @onready var shop: Panel = $Shop
-@onready var buy: Button = $Shop/Buy
-@onready var buy_2: Button = $Shop/Buy2
-@onready var buy_3: Button = $Shop/Buy3
-@onready var currency: Label = $Shop/Currency
-@onready var customitazion: Panel = $Customitazion
-@onready var change_mode: Button = $ChangeMode
-
-var current_currency: int = 1000
+@onready var currency_label: Label = $Shop/Currency
+@onready var customization: Panel = $Customitazion 
+@onready var change_mode_btn: Button = $ChangeMode
 
 func _ready() -> void:
+	switch_to_shop_mode()
+	update_currency_ui()
+
+func update_currency_ui() -> void:
+	currency_label.text = str(GlobalData.tow_bucks)
+
+func switch_to_shop_mode() -> void:
 	shop.visible = true
-	customitazion.visible = false
-	change_mode.text = "Customization"
-	
-func _process(delta: float) -> void:
-	current_currency = clampi(current_currency, 0, 9999999)
-	currency.text = str(current_currency)
+	customization.visible = false
+	change_mode_btn.text = "Customization"
 
-func _on_buy_pressed() -> void:
-	if LevelCore.lvl0_completed:
-		current_currency -= 100
-		currency.text = str(current_currency)
-
-func _on_buy_2_pressed() -> void:
-	if LevelCore.lvl1_completed:
-		current_currency -= 200
-		currency.text = str(current_currency)
-
-func _on_buy_3_pressed() -> void:
-	if LevelCore.lvl4_completed:
-		current_currency -= 300
-		currency.text = str(current_currency)
-
+func switch_to_custom_mode() -> void:
+	shop.visible = false
+	customization.visible = true
+	change_mode_btn.text = "Shop"
 
 func _on_change_mode_pressed() -> void:
 	if shop.visible:
-		shop.visible = false
-		customitazion.visible = true
-		change_mode.text = "Shop"
+		switch_to_custom_mode()
 	else:
-		_ready()
+		switch_to_shop_mode()
+
+func attempt_purchase(cost: int, is_level_unlocked: bool, already_owned: bool) -> bool:
+	if not is_level_unlocked:
+		return false
+	if already_owned:
+		return false 
+	if GlobalData.tow_bucks < cost:
+		return false
+		
+	GlobalData.tow_bucks -= cost
+	update_currency_ui()
+	return true
+
+func _on_buy_pressed() -> void:
+	if attempt_purchase(100, LevelCore.lvl0_completed, GlobalData.hasItem1):
+		GlobalData.hasItem1 = true
+
+func _on_buy_2_pressed() -> void:
+	if attempt_purchase(200, LevelCore.lvl1_completed, GlobalData.hasItem2):
+		GlobalData.hasItem2 = true
+
+func _on_buy_3_pressed() -> void:
+	if attempt_purchase(300, LevelCore.lvl4_completed, GlobalData.hasItem3):
+		GlobalData.hasItem3 = true

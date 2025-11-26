@@ -2,6 +2,10 @@ extends Node
 
 var truck_color_array : Array = [Color("ffffff"), Color("ffff00"), Color("ff0000"), Color("28192f")]
 var car_array : Array = []
+var tow_bucks = 100000
+var hasItem1 : bool = false
+var hasItem2 : bool = false
+var hasItem3 : bool = false
 
 var current_truck : int = 0
 var current_car : int = 0

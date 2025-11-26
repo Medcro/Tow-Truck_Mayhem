@@ -1,5 +1,8 @@
 extends Panel
 
+var temp_truck_index: int = 0
+var temp_car_index: int = 0
+
 func _ready() -> void:
 	connect_signals()
 	
@@ -17,6 +20,7 @@ func truck_back() -> void:
 func truck_forw() -> void:
 	GlobalData.current_truck = (GlobalData.current_truck + 1) % GlobalData.truck_color_array.size()
 	%"tow-truck".set_self_modulate(GlobalData.truck_color_array[GlobalData.current_truck])
+	
 func car_back() -> void:
 	GlobalData.current_car = (GlobalData.current_car - 1) % GlobalData.car_array.size()
 	%car.texture = GlobalData.car_array[GlobalData.current_car]
