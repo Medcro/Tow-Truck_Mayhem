@@ -32,6 +32,11 @@ func _physics_process(delta: float):
 	calculate_steering(delta)
 	
 	velocity += acceleration * delta
+	
+	var collision = move_and_collide(velocity*delta)
+	if collision:
+		velocity = velocity.bounce(collision.get_normal())
+	
 	move_and_slide()
 
 # a function to handle user input

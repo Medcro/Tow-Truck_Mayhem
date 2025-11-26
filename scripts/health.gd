@@ -67,6 +67,7 @@ func set_health(value: int):
 		var difference = clamped_value - health
 		health = value
 		health_changed.emit(difference)
+		health_changed.emit()
 		
 		# emits the health_depleted signal
 		if health == 0:
@@ -74,3 +75,6 @@ func set_health(value: int):
 		
 func get_health():
 	return health
+
+func signal_health():
+	emit.

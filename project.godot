@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Tow-Truck Mayhem"
+
 [input]
 
 steer_right={

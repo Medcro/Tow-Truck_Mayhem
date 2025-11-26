@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://7qfqg006l7ij"]
+[gd_scene load_steps=8 format=3 uid="uid://7qfqg006l7ij"]
 
-[ext_resource type="Texture2D" uid="uid://8d10nul8adj6" path="res://icon.svg" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://wn0i3g7bv8c1" path="res://scripts/GameManager.gd" id="1_tipki"]
 [ext_resource type="PackedScene" uid="uid://dthkrlr4x3ypa" path="res://scenes/waypoint_marker.tscn" id="3_tefeu"]
 [ext_resource type="PackedScene" uid="uid://wp3dtf2tgjc" path="res://scenes/timer.tscn" id="4_jyhfs"]
@@ -11,11 +10,6 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_tipki")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1417, -524)
-scale = Vector2(25.343748, 15.46875)
-texture = ExtResource("1_sugp2")
 
 [node name="Car" parent="." instance=ExtResource("5_tbgi4")]
 position = Vector2(1195, 106)

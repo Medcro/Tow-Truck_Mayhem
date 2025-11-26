@@ -26,3 +26,6 @@ func update_heart_display():
 
 func _on_health_changed(diff: int):
 	update_heart_display()
+	
+	
+	

@@ -3,6 +3,7 @@ class_name Clock
 
 # Signal emitted when the timer runs out and the player loses
 signal time_out
+signal finish
 
 @onready var label: Label = $Label 
 @onready var timer: Timer = $Timer 
@@ -25,3 +26,6 @@ func _process(delta):
 func _on_timer_timeout() -> void:
 	emit_signal("time_out")  # Notify other nodes that the player lost
 	print("Time out")
+
+func game_finished_under_time_limit:
+	emit_signal("finish")
